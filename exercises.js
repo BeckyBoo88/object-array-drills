@@ -13,8 +13,15 @@ const album1 = {
 
 // 1. Retrieve the string "Sire" from album1, and save it in a sensibly named
 //    variable.
+let label = album1.albumDetails.label
+console.log(label)
+
 
 // 2. Change the title of album1 from "Talking Heads" to "Talking Heads: 77"
+
+album1.title = 'Talking Heads: 77'
+console.log(album1.title)
+
 
 const album2 = {
   title: "More Songs About Buildings and Food",
@@ -38,8 +45,14 @@ const album3 = {
 //    album3's formats
 // Check out the Array.push method!
 
+album3.albumDetails.formats.push('LP')
+console.log(album3.albumDetails.formats)
+
 // 4. Change the release date of album3 from a string into a Date object
 // Look ahead to album4 for a clue!
+
+album3.albumDetails.released = new Date("August 3, 1979")
+console.log(album3)
 
 const album4 = {
   title: "Remain in Light",
@@ -50,6 +63,8 @@ const album4 = {
 };
 
 // 5. Add the label "Sire" to album4's details
+album4.albumDetails.label = 'Sire'
+console.log(album4)
 
 const album5 = {
   title: "Speaking in Tongues",
@@ -60,6 +75,9 @@ const album5 = {
 };
 
 // 6. Add a 'formats' array to album 5 and add "CD", "Cassette", and "LP"
+
+album5.albumDetails.formats = ['CD', 'Cassette', 'LP']
+console.log(album5)
 
 const album6 = {
   title: "Little Creatures",
@@ -73,6 +91,9 @@ const album6 = {
 // 7. Make the label "emi" in album6 all uppercase
 // google how to make a string uppercase in js!
 
+album6.albumDetails.labels[1] = album6.albumDetails.labels[1].toUpperCase()
+console.log(album6)
+
 const album7 = {
   title: "True Stories",
   albumDetails: {
@@ -85,6 +106,9 @@ const album7 = {
 // 8. Convert album7's 'labels' property from the string value
 //    "Sire, EMI" into the array: ["Sire", "EMI"]
 // google js array split!
+
+album7.albumDetails.labels = ['Sire', 'EMI']
+console.log(album7)
 
 /////////////////////////////////////////////////////
 // Part 2: More Tasks About Datatypes and Structures
@@ -111,24 +135,23 @@ const talkingHeadsAlbums = [
 ];
 
 // 1. Create an object literal called `band`.
-let band = {};
+let band ={};
 
 // 2. Give it the property `name` and set it to "Talking Heads"
-band.name = "Talking Heads";
+band.name = 'Talking Heads';
+
 
 // 3. Give it the property `members` and set it to an array with a single
 //    string, "David Byrne", in it.
-band.members = ["David Byrne"];
+
 
 // 4. Give it the property `albums` and set it to the array stored in the
 //    variable talkingHeadsAlbums
-band.albums = talkingHeadsAlbums;
+
 
 // 5. Add "Tiny Weymouth", "Chris Franz" and "Jerry Harrison" to the members
 //    array.
-band.members.push("Tiny Weymouth");
-band.members.push("Chris Franz");
-band.members.push("Jerry Harrison");
+
 
 ////////////////////////////////////////////////
 // Part 3: Conditional Logic
